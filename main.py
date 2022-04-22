@@ -18,9 +18,8 @@ report = example1 + f' scored in the {goal_0}' + 'nd minute' + '\n' + example2 +
 
 
 player = 'Marco van Basten'
-first_name = player[0:5]
-last_name_len = len(player[6:])
-name_short = player[0:1] + '. '+ player[6:]
+first_name = player[0: player.find(' ')]
+last_name_len = len(player[player.index(' ')+1:])
+name_short = player[0:1] + '. '+ player[player.index(' ')+1:]
 chant = (first_name + '! ') * (len(first_name)-1) + first_name + '!'
 good_chant = chant[-1] != ' '
-print(last_name_len)
